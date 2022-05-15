@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santa Studio</title>
+    <link rel="stylesheet" href="stylesheets/master.css">">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="scripts/parallax.js"></script>
+    <script src="scripts/sidebar.js"></script>
+    <script src="scripts/slider.js"></script>
+</head>
+
+<body>
+    <header class="header">
+        <!-- header-inner  -->
+        <!-- header logo -->
+        <div class="logo-holder">
+            <a href="#">
+                <!-- Link towards Home-->
+                <img id="header-img"
+                    src="https://res.cloudinary.com/santinator/image/upload/v1652471430/test/logo_v44mr6.png"
+                    class="logo" alt="Santa Studio Logo" />
+            </a>
+            <h1 id="logo-text">SANTA <span>STUDIO</span></h1>
+        </div>
+        <!-- header logo end -->
+
+        <!-- navigation  -->
+        <div class="nav-holder">
+            <nav id="nav-bar">
+                <ul id="main-menu" class="nav-ul">
+                    <li id="nav-home" class=""><a href="#">HOME</a></li>
+                    <li id="nav-why" class=""><a href="#">WHY SANTA STUDIO?</a></li>
+                    <li id="nav-services" class=""><a href="#">SERVICES</a></li>
+                    <li id="nav-contact" class=""><a href="#">CONTACT</a></li>
+                </ul>
+            </nav>
+
+            <div id="nav-button">
+                <button class="openbtn" onclick="openNav()">&#9776;</button>
+            </div>
+        </div>
+
+        <!-- Side bar  -->
+        <div id="sidebar" class="sidebar">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#">Home</a>
+            <a href="#">Why Santa Studio?</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+    </header>
+    <div id="scroll-animate">
+        <div id="scroll-animate-main">
+            <div class="wrapper-parallax">
+                <section class="under">
+                    <!-- Slider 1 -->
+                    <div class="slider" id="slider1">
+
+                        <!-- Slides -->
+                        <div
+                            style="background-image:url(https://res.cloudinary.com/santinator/image/upload/v1652552809/test/4_m7hpgb.jpg);">
+                            <p>Santa is the <span>best</span></p>
+                        </div>
+                        <div
+                            style="background-image:url(https://res.cloudinary.com/santinator/image/upload/v1652552809/test/2_lio1c6.jpg);">
+                            <p>He is the <span>sexiest</span></p>
+                        </div>
+                        <div
+                            style="background-image:url(https://res.cloudinary.com/santinator/image/upload/v1652552809/test/1_a7gftl.jpg);">
+                            <p>You have to <span>trust</span> him</p>
+                        </div>
+                        <div
+                            style="background-image:url(https://res.cloudinary.com/santinator/image/upload/v1652552809/test/3_e4ioxd.jpg);">
+                            <p>So <span>what</span> are you waiting for?</p>
+                            <span>
+                        </div></span>
+
+
+                        <!-- The Arrows -->
+                        <i class="left" class="arrows" style="z-index:2; position:absolute;"><svg width="60px"
+                                height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"
+                                    stroke-linejoin="round" points="
+                                45.63,75.8 0.375,38.087 45.63,0.375 " />
+                            </svg> </i>
+                        <i class="right" class="arrows" style="z-index:2; position:absolute;"><svg
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="60px" height="80px" viewBox="0 0 50 80" xml:space="preserve">
+                                <polyline fill="none" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"
+                                    stroke-linejoin="round" points="
+                                        0.375,0.375 45.63,38.087 0.375,75.8 " />
+                            </svg></i>
+                    </div>
+
+                </section>
+
+                <!-- Main section -->
+                <section class="content">
+                    <h1 class="legend">Content</h1>
+                </section>
+                <!-- Main section -->
+
+                <!-- footer -->
+                <footer>
+                    <div class="footer-container">
+                        <!-- About - Links -->
+                        <div class="footer-top">
+                            <div class="footer-about">
+                                <h6>About</h6>
+                                <p class="text-justify">Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                    Aliquam ex adipisci delectus quisquam nemo iusto incidunt provident porro cumque,
+                                    unde eveniet officiis placeat veritatis ducimus? Et veritatis quasi iusto labore?
+                                </p>
+                            </div>
+
+                            <div id="footer-links1" class="footer-links">
+                                <h6>Categories</h6>
+                                <ul class="footer-ul">
+                                    <li><a href="#">Architecture</a></li>
+                                    <li><a href="#">Structural Design</a></li>
+                                    <li><a href="#">Project Management</a></li>
+                                    <li><a href="#">Estimates</a></li>
+                                </ul>
+                            </div>
+
+                            <div id="footer-links2" class="footer-links">
+                                <h6>Quick Links</h6>
+                                <ul class="footer-ul">
+                                    <li><a href="#">About Us</a></li>
+                                    <li><a href="#">Contact Us</a></li>
+                                    <li><a href="#">Contribute</a></li>
+                                    <li><a href="#">Privacy Policy</a></li>
+                                    <li><a href="#">Sitemap</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <hr>
+
+                        <!-- Copyright - Social Media Links -->
+                        <div class="footer-bottom">
+                            <div class="footer-copyright">
+                                <p class="copyright-text">Copyright &copy; 2022 All Rights Reserved by
+                                    <a href="#">Santa Studio</a>.
+                                </p>
+                            </div>
+
+                            <div class="footer-social">
+                                <ul class="social-icons">
+                                    <li><a class="facebook" href="#"><i class="fa fa-facebook"></i></a></li>
+                                    <li><a class="twitter" href="#"><i class="fa fa-twitter"></i></a></li>
+                                    <li><a class="instagram" href="#"><i class="fa fa-instagram"></i></a></li>
+                                    <li><a class="linkedin" href="#"><i class="fa fa-linkedin"></i></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

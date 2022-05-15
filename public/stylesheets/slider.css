@@ -1,0 +1,200 @@
+.slider, 
+.slider > div {
+    /* Images default to Center Center. Maybe try 'center top'? */
+    background-position: center center;
+    display: block;
+    width: 100%;
+    height: calc(100vh - 100px);
+    /* height: 100vh; *//* If you want fullscreen */
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: #000;
+    overflow: hidden;
+    -moz-transition: transform .4s;
+    -o-transition: transform .4s;
+    -webkit-transition: transform .4s;
+    transition: transform .4s;
+}
+
+.slider {
+    position: absolute;
+    top: 100px;
+}
+
+.slider > div {
+    position: absolute;
+}
+
+.slider > i {
+    opacity: 0.3;
+    border: 0;
+    outline:0;
+    position: absolute;
+    margin: 20px;
+    top: 30%;
+    padding: 10px 13px;
+    cursor: pointer;
+    border-radius: 3px;
+    z-index: 4;
+}
+
+.slider > i svg {
+    margin-top: 3px;
+}
+
+.slider > .left {
+    left: -100px;
+}
+.slider > .right {
+    right: -100px;
+}
+.slider:hover > .left {
+    left: 0;
+}
+.slider:hover > .right {
+    right: 0;
+}
+
+.slider > .left:hover polyline,
+.left:focus polyline {
+  stroke-width: 3;
+}
+
+.slider > .left:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+.slider > .right:hover polyline,
+.right:focus polyline {
+  stroke-width: 3;
+}
+
+.slider > .right:active polyline {
+  stroke-width: 6;
+  transition: all 100ms ease-in-out;
+}
+
+polyline {
+    transition: all 250ms ease-in-out;
+  }
+
+.slider:hover > div {
+    transform: scale(1.1);
+}
+
+.hoverZoomOff:hover > div {
+    transform: scale(1);
+}
+
+.slider > ul {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    z-index: 4;
+    padding: 0;
+    margin: 0;
+    transform: translateX(-50%);
+}
+
+.slider > ul > li {
+    padding: 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    list-style: none;
+    float: left;
+    margin: 10px 10px 0;
+    cursor: pointer;
+    border: 1px solid #fff;
+    -moz-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+    opacity: 0.7;
+}
+
+.slider > ul > .showli {
+    background-color: var(--purple);
+    -moz-animation: boing .5s forwards;
+    -o-animation: boing .5s forwards;
+    -webkit-animation: boing .5s forwards;
+    animation: boing .5s forwards;
+}
+
+.slider > ul > li:hover {
+    background-color: var(--cyan);
+}
+
+.slider > .show {
+    z-index: 1;
+}
+
+.hideDots > ul {
+    display: none;
+}
+
+.showArrows > .left {
+    left: 0;
+}
+
+.showArrows > .right {
+    right: 0;
+}
+
+.slider > div p {
+    display: block;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgba(255, 255, 255, 0.9);
+    text-shadow: 0 0 1px #fff;
+    overflow: hidden;
+    transition: .3s;
+    text-align: center;
+    padding: 0;
+    width: 80%;
+    font-size: 1.5rem;
+}
+
+.slider > div > p > span {
+    opacity: 0.9;
+    --h: 1.2em;
+    line-height: var(--h);  
+    color: #0000;
+    overflow: hidden;
+    text-shadow:
+    0 calc(-1 * var(--_t, 0em)) var(--purple), 
+    0 calc(var(--h) - var(--_t, 0em)) #fff;
+    background: 
+    linear-gradient(var(--purple) 0 0) no-repeat 
+    calc(200% - var(--_p, 0%)) 100% / 200% var(--_p, .08em);
+    transition: .3s var(--_s, 0s), background-position .3s calc(.3s - var(--_s, 0s));
+}
+
+.slider:hover > div > p > span {
+    --_t: var(--h);
+    --_p: 100%;
+    --_s: .3s;
+}
+
+@keyframes boing {
+    0% {
+        transform: scale(1.2);
+    }
+    40% {
+        transform: scale(.6);
+    }
+    60% {
+        transform: scale(1.2);
+    }
+    80% {
+        transform: scale(.8);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+

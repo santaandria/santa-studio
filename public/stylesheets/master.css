@@ -1,0 +1,28 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url(footer.css);
+@import url(header.css);
+@import url(parallax.css);
+@import url(sidebar.css);
+@import url(slider.css);
+
+:root {
+  --cyan: rgb(115, 192, 218);
+  --purple: rgb(176, 131, 213);
+  --beige: rgb(115, 115, 115);
+  --white: #fff;
+}
+
+body {
+  font-family: "Open Sans";
+  font-size: 100%;
+  margin: 0;
+}
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}

@@ -1,0 +1,147 @@
+.header {
+    background-color: black;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100px;
+    padding: 0px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1;
+    margin-bottom: 0;
+  }
+  
+  .logo-holder {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    max-width: 300px;
+    margin-left: 20px;
+  }
+  
+  .logo {
+    width: 100px;
+    margin-right: 9px;
+  }
+  
+  #logo-text {
+    font-family: "Monoton";
+    color: var(--purple);
+    font-weight: 75;
+    font-size: 1.5rem;
+    width: 100px;
+  }
+  
+  #logo-text span {
+    font-family: "Monoton";
+    color: var(--cyan);
+    font-weight: 75;
+    font-size: 1.5rem;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .logo {
+      width: 83px;
+      margin-right: 7.5px;
+    }
+  
+    .logo-holder {
+      width: 250px;
+    }
+  
+    #logo-text,
+    #logo-text span {
+      font-weight: 50;
+      font-size: 1.25rem;
+      width: 100px;
+    }
+  
+    /* Make nav disappear when display is small to be replaced by button */
+    #nav-bar {
+      display: none;
+    }
+  }
+  
+  
+  .nav-holder {
+    width: 100%;
+    padding-right: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .nav-ul {
+    display: flex;
+    float: right;
+    width: 500px;
+    flex-direction: row;
+    justify-content: space-around;
+    box-sizing: border-box;
+  
+  }
+  
+  .header a:link {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header a:visited {
+    text-decoration: none;
+    color: white;
+  }
+  
+  .header a:hover {
+    text-decoration: none;
+    animation-name: nav-hover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes nav-hover {
+    100% {
+      color: var(--purple);
+    }
+  }
+  
+  .header a:active {
+    color: var(--purple);
+    text-decoration: none;
+  }
+  
+  /* The button used to open the sidebar */
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    float: right;
+  }
+  
+  .openbtn:hover {
+    animation-name: nav-hover;
+    animation-duration: 500ms;
+    animation-fill-mode: forwards;
+  }
+  
+  /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+  #nav-button {
+    transition: margin-left .5s;
+    /* If you want a transition effect */
+    padding: 15px;
+  }
+  
+  @media (min-width: 768px) {
+  
+    /* Make nav disappear when display is small to be replaced by button */
+    #nav-button {
+      display: none;
+    }
+  }
